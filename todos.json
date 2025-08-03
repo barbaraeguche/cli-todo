@@ -1,0 +1,20 @@
+[
+  {
+    "Task": "Implement round-robin load balancer in Go",
+    "IsComplete": false,
+    "CreatedAt": "2025-08-01T09:20:44.178374-04:00",
+    "CompletedAt": null
+  },
+  {
+    "Task": "Complete lab report on binary search trees",
+    "IsComplete": false,
+    "CreatedAt": "2025-08-01T09:20:44.178375-04:00",
+    "CompletedAt": null
+  },
+  {
+    "Task": "Review lecture slides for OS memory management",
+    "IsComplete": false,
+    "CreatedAt": "2025-08-01T09:20:44.178375-04:00",
+    "CompletedAt": null
+  }
+]
