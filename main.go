@@ -28,9 +28,3 @@ func main() {
 		return
 	}
 }
-
-// Implement round-robin load balancer in Go
-// Complete lab report on binary search trees
-// Review lecture slides for OS memory management
-// Finish reading Chapter 2 of Distributed Systems
-// Submit DBMS assignment on normalization

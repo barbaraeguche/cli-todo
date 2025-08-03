@@ -12,6 +12,7 @@ var editIndex int
 var editCmd = &cobra.Command{
 	Use:   "edit",
 	Short: "Edit a task",
+	Long:  "Edit modifies an existing task. e.g: task edit -i=1 \"submit phil paper 2\"",
 	Args:  cobra.ExactArgs(1),
 	Run: func(cmd *cobra.Command, args []string) {
 		task := strings.TrimSpace(args[0])

@@ -1,6 +1,7 @@
 package cmd
 
 import (
+	"fmt"
 	"os"
 
 	"github.com/barbaraeguche/cli-todo/todo"
@@ -17,16 +18,28 @@ func GetTodos() *todo.Todos {
 }
 
 var rootCmd = &cobra.Command{
-	Use:   "cli-todo",
-	Short: "CLI Todo",
-	Long: `A simple and minimal command-line todo application written in Go.
+	Use:   "task",
+	Short: "A simple CLI to manage your tasks",
+	Long: `       .__  .__            __             .___
+  ____ |  | |__|         _/  |_  ____   __| _/____
+_/ ___\|  | |  |  ______ \   __\/  _ \ / __ |/  _ \
+\  \___|  |_|  | /_____/  |  | (  <_> ) /_/ (  <_> )
+ \___  >____/__|          |__|  \____/\____ |\____/
+     \/                                    \/
 
-This project serves as an introduction to building CLI tools using the Cobra library.
-It allows users to add, view, and manage tasks directly from the terminal.`,
+A simple and minimal command-line todo application written in Go.
+
+This project serves as my introductory to building command-line
+applications, and the Go language as a whole.
+
+This minimal app allows users to add, view, and manages pending
+todos they may currently have.
+`,
 }
 
 func Execute() {
 	if err := rootCmd.Execute(); err != nil {
+		_, _ = fmt.Fprintln(os.Stderr, err)
 		os.Exit(1)
 	}
 }

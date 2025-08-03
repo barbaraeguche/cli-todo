@@ -11,6 +11,7 @@ var deleteIndex int
 var deleteCmd = &cobra.Command{
 	Use:   "delete",
 	Short: "Delete a task",
+	Long:  "Delete removes a task from the list. e.g: task delete -i=1",
 	Args:  cobra.ExactArgs(0),
 	Run: func(cmd *cobra.Command, args []string) {
 		err := GetTodos().Delete(deleteIndex)
