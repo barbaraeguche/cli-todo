@@ -6,7 +6,8 @@ import (
 
 var listCmd = &cobra.Command{
 	Use:   "list",
-	Short: "Display current tasks",
+	Short: "List current tasks",
+	Long:  "List displays all tasks in your task list with their status.  e.g: task list",
 	Args:  cobra.ExactArgs(0),
 	Run: func(cmd *cobra.Command, args []string) {
 		GetTodos().List()

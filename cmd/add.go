@@ -10,8 +10,9 @@ import (
 
 var addCmd = &cobra.Command{
 	Use:   "add",
-	Short: "Adds a new task",
+	Short: "Add a new task",
 	Args:  cobra.ExactArgs(1),
+	Long:  "Add creates a new task and stores it in your task list. e.g: task add \"buy groceries\"",
 	Run: func(cmd *cobra.Command, args []string) {
 		task := strings.TrimSpace(args[0])
 		if task == "" {

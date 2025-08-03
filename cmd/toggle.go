@@ -10,7 +10,8 @@ import (
 var toggleIndex int
 var toggleCmd = &cobra.Command{
 	Use:   "toggle",
-	Short: "Mark/Unmark a task as completed",
+	Short: "Toggle task completion",
+	Long:  "Toggle marks a task as completed or uncompleted. e.g: task toggle -i=1",
 	Args:  cobra.ExactArgs(0),
 	Run: func(cmd *cobra.Command, args []string) {
 		err := GetTodos().Complete(toggleIndex)

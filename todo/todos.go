@@ -88,10 +88,10 @@ func (ts *Todos) List() {
 	t.SetHeaders("#", "Task", "Completed", "Created At", "Completed At")
 
 	for idx, task := range *ts {
-		completed, completedAt := "🌑", ""
+		completed, completedAt := "no", ""
 
 		if task.IsComplete {
-			completed = "🌕"
+			completed = "yes"
 			if task.CompletedAt != nil {
 				completedAt = task.CompletedAt.Format(time.RFC1123)
 			}
