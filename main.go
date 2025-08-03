@@ -1,0 +1,36 @@
+package main
+
+import (
+	"fmt"
+	"os"
+
+	"github.com/barbaraeguche/cli-todo/cmd"
+	st "github.com/barbaraeguche/cli-todo/storage"
+	"github.com/barbaraeguche/cli-todo/todo"
+)
+
+func main() {
+	todos := todo.Todos{}
+	storage := st.New[todo.Todos]("todos.json")
+
+	err := storage.Load(&todos)
+	if err != nil {
+		_, _ = fmt.Fprintf(os.Stderr, "Error loading todos: %s", err)
+		return
+	}
+
+	cmd.SetTodos(&todos)
+	cmd.Execute()
+
+	err = storage.Store(todos)
+	if err != nil {
+		_, _ = fmt.Fprintf(os.Stderr, "Error storing todos: %s", err)
+		return
+	}
+}
+
+// Implement round-robin load balancer in Go
+// Complete lab report on binary search trees
+// Review lecture slides for OS memory management
+// Finish reading Chapter 2 of Distributed Systems
+// Submit DBMS assignment on normalization
