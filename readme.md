@@ -24,4 +24,4 @@ the classic todo app; built to deepen my understanding of core go concepts.
 - run `go build -o task` to rebuild after changes
 - `go run .` to run the application
 
-*note: task data is saved and updated automatically in a local json file*
+*note: task data is saved and updated automatically in a local json file.*
